@@ -27,7 +27,7 @@ function getXmlHttp() {
 (function () {
     var xmlhttp = getXmlHttp();
     xmlhttp.open('GET', './Terms_of_use.txt');
-    // Здесь синхронный request был заменён на асинхронный.
+    // Здесь синхронный request был заменён на асинхронный из-за ругающегося на устаревшие методы браузера.
     xmlhttp.onload = function(e) {
     if (xmlhttp.status == 200 && xmlhttp.readyState == 4) {
         var content = xmlhttp.responseText;

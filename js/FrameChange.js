@@ -21,4 +21,3 @@ let frameChange = function()  {
         }, 750);
     };
 };
-

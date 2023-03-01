@@ -1,3 +1,4 @@
+// Скрипт выезжающего по нажатию кнопки футтера
 'use strict'
 const footer = document.querySelector('#FooterContainer');
 const push = document.getElementById('FooterPusher');
@@ -28,13 +29,3 @@ function down() {
     setAttributes(push, {'style': 'transform: rotate(0deg)'});
     setAttributes(pushIcon, {'alt':'Показать футтер', 'title':'Показать футтер'});
 } 
-
-/*
-    Функцию стоит доработать? Mouseover и mouseleave вызовет проблемы на смартфоне?
-    Скорее всего использование скрытия футера по таймеру - плохой ход для мобильного UX.
-    
-    В случае использования подобного функционала код будет выглядеть как-то так:
-    footer.addEventListener("mouseleave", function() {
-        setTimeout(down, 1500);
-    });
-*/
