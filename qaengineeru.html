@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./images/shortcut_icon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="manifest" href="./manifest.json">
+        <meta name="description" content="Автор: Я.А. Скоробогатый,
+        QA-Enginee.ru - информационный портал о теории тестирования программного обеспечения (ПО), информация будет полезна как новичкам в мире QA инженерии,
+        так и профессионалам, желающим освежить в памяти базовую теорию тестирования.">
+
+        <title>Энциклопедия типичного QA-инженера</title>
+    </head>
+
+    <body class="light-theme" id="theme">
+
+        <div class="AllPage">
+
+            <div class="header unselect">
+                
+                <div class="HeaderImageContainer">
+                    <picture>
+                        <source type="image/avif" srcset="./images/Header.avifs">
+                        <source type="image/webp" srcset="./images/Header.webp">
+                        <img class="HeaderImage" src="./images/Header.svg" alt="Header Image" width="800px" height="231px">
+                    </picture>
+                </div>
+
+                <div class="Title1">
+                    <h1> QA Enginee.ру </h1>
+                </div>
+            
+                <div class="Title2">
+                    <h4> Энциклопедия типичного QA-инженера </h4>
+                </div>         
+            </div>
+
+            <div class="limiter">
+                <div class="button">
+                    <button class="switcher-on", id="switcher" onclick="getScript('./js/ThemeSwitcher.js'), getTheme('./css/darkmain.css')"
+                    title="Сменить тему оформления"></button>
+                </div>
+            </div>
+            
+            <span class="MainPageLink">
+                <a href="qaengineeru.html" title="На главную"></a>
+            </span>
+
+            <div class="Main">
+                <div class="Main_Container_1">
+                    <div class="ArticlesList">
+                        <script src="/js/FrameChange.js" async ></script>
+                        <ul>
+                        <li> <a id="page1" onclick="frameChange(currentLink='page1.html')"><p>Как подготовиться к собеседованию?</p></a> </li>
+
+                        <li> <a id="page2" onclick="frameChange(currentLink='page2.html')"><p>Изучаем методологии разработки ПО</p></a> </li>
+
+                        <li> <a id="page3" onclick="frameChange(currentLink='page3.html')"><p>Техники тест-дизайна.<br>Что это и как этим пользоваться?</p></a> </li>
+                        </ul>
+                    </div>
+                
+                    <div class="PageInPage" id="PageInPage">
+                        <div class="LoadScreen" id="LoadScreen" style="opacity: 0; display: none;">
+                            <video class="VideoInLoadscreen" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" id="video">
+                                <source src="/images/Preloaders/Loading-bar.mp4" type="video/mp4" id="source-video">
+                            </video>
+                        </div>
+                        <iframe id="frame" src="./welcome.html" title="Выберите интересующую Вас тему в меню слева" style="border: none" width="100%" height="100%">
+                        <p> К сожалению, ваш браузер не поддерживает отображение элементов iframe =(</p>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="FooterContainer down unselect" id="FooterContainer">
+                <div class="FooterPusher" id="FooterPusher"><img src="/images/FooterPusher2.svg" id="pushIcon" height="30px" width="32.8px"
+                    onclick="getScript('./js/FooterPusher.js')" alt="Показать футтер" title="Показать футтер">
+                </div>
+                
+                <div class="footer1" id="footer1">
+                    <h3><p> QA Enginee.ру </p></h3>
+                    <h4><p> Хотите связаться с разработчиком?
+                        <br>
+                    Не проблема:</p></h4>
+                </div>
+
+                <div class="footer2" id="footer2">
+                    <p> ЗАО "КьюЭй Инженеру"<br>2022-2023 </p>
+                    <h5><p class="UpdateDate" id="UpdateDate">Обновлено </p></h5>
+                    <button><a id="ToU" class="ToU_Button" onclick="getScript('./js/TermsOfUse.js'); getTheme('./css/modal.css')" href="#TermsOfUse" title="Ознакомиться с пользовательским соглашением">Пользовательское соглашение</a></button>
+
+                    <div class="SocialLinks" id="SocialLinks">
+                        <a class="GmailIcon" href="mailto:skarabahatyyaroslav@gmail.com?subject=QA Enginee.ru: cоветы/предложения/отчёты об ошибках" title="Отправить разработчику письмо" target="_blank" rel="noopener"></a>
+                        <a class="VkIcon" href="https://vk.com/tzero" title="Страница разработчика в VK" target="_blank" rel="noopener"></a>
+                        <a class="TelegramIcon" href="https://t.me/TZero_spb" title="Отправить разработчику сообщение в Telegram" target="_blank" rel="noopener"></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="TermsOfUse" id="TermsOfUse" style="display: none;">
+            
+                <div class="ModalHeader"> 
+                    <h3>Пользовательское соглашение</h3>
+                    <a href="#close" title="Закрыть окно" class="close">×</a>
+                </div>
+
+                <div class="ModalContent">
+                    <p id="TermsOfUseText"></p>
+                </div>
+
+                <div class="ModalBottomWhiteSpace">
+                </div>
+            </div>
+
+        </div>
+        
+        <script src="/js/app.js" async></script>
+        <noscript>Вам необходимо задействовать поддержку JavaScript для корректной работы нашего веб-сайта.</noscript>
+    </body>
+
+</html>
+
+<!-- TO DO LIST:
+
+    Важные:
+    - Горизонтальная прокрутка у iframe.
+      
+    Необязательные:
+    - Вывести загрузку скрипта FrameChange за загрузку основной страницы? Даже если это возможно - могут возникуть непредвиденные проблемы.
+-->

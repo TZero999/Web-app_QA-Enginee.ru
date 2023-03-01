@@ -1,0 +1,43 @@
+/* Main */
+.dark-theme {
+    color:      #ffffff;
+    background: #2e2d2d;
+    transition: color 0.5s ease, background 0.5s ease; 
+}
+
+.dark-theme a {
+    text-decoration:    none;
+    color:              rgb(255, 255, 255);
+}
+
+.dark-theme a:hover {
+    color:   rgb(255, 196, 85);
+}
+
+/* Dark Theme of Header */
+
+.dark-theme .header {
+    color: #000000;
+}
+
+/* Dark Theme of Footer */
+.dark-theme .FooterContainer {
+    color: #000000;
+}
+
+.dark-theme .FooterContainer a {
+    color: #000000;
+}
+
+.dark-theme .FooterContainer a:hover {
+    color: #2e2d2d;
+}
+
+/* Dark Theme of Modal Window */
+.ModalHeader a {
+    color: #000000;
+}
+
+.ModalHeader a:hover {
+    color: #2e2d2d;
+}

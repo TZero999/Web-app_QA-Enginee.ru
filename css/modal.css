@@ -1,0 +1,128 @@
+/* Terms of Use - Modal Window START  */
+    
+.TermsOfUse {
+    /* display: none; /* Удаляется в скрипте TermsOfUse*/
+    display: flex;
+    flex-direction: column;
+
+     position: fixed;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+
+     max-width: 450px;
+     height: 650px;
+     margin: auto;
+     border-radius: 30px;
+
+     color: #000000;
+     
+     background: rgba(255, 255, 255, 0.95);
+     z-index: 110;
+     opacity: 0;
+     transition: opacity 0.2 ease-in;
+     pointer-events: none;
+    }
+
+    .TermsOfUse:target {
+     opacity: 100%;
+     pointer-events: auto;
+     overflow-y: auto;
+     overflow-x: hidden;
+    }
+  /* Трэкер */
+    .TermsOfUse::-webkit-scrollbar {
+     background: scroll;
+     width: 5px;
+    }
+
+ /* Ползунок */
+    .TermsOfUse::-webkit-scrollbar-thumb {
+     background-color: rgb(255 168 97);
+     border-radius: 0px;
+    }
+
+ /* For symbol x START */
+    .TermsOfUse a {
+     color: #000000;
+    }
+
+    .TermsOfUse a:hover {
+     color: #2e2d2d;
+    }
+ /*  For symbol x END */
+
+    .ModalHeader {
+     display: flex;
+     flex: 0 1 5%;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     padding-left: 25px;
+     padding-right: 25px;
+    }
+
+    .close {
+     
+     position: fixed;
+     transform: translateX(400px);
+     float: right;
+     font-family: sans-serif;
+     font-size: 24px;
+     font-weight: 700;
+     line-height: 1;
+     opacity: 0.5;
+     z-index: 110;
+     transition: all 0.5s ease;
+    }
+
+    .ModalContent {
+     position: relative;
+     display: flex;
+     flex: 0 1 90%;
+     
+     padding-left: 25px;
+     padding-right: 25px;
+     overflow-y: auto;
+     overflow-x: hidden;
+     white-space: pre-line;
+    }
+
+    .ModalBottomWhiteSpace {
+     display: flex;
+     flex: 1 0 5%;
+     max-width: 450px;
+     height: 35px;
+     z-index: 110;
+     margin: auto;
+     background-color: white;
+     border-bottom-left-radius: 10px;
+    }
+
+    /* Modal Adaptive START */
+    @media (max-width: 455px) {
+        .close{
+        transform: translateX(-10px);
+        transition: all 0.5s ease-in-out;
+        }
+
+        .ModalHeader h3{
+        margin-left: 25px;
+        transition: all 0.5s ease-in-out;
+        }
+
+        .ModalContent p{
+        font-size: smaller;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .ModalHeader h3{
+            font-size: small;
+        }
+        
+    }
+    /* Modal Adaptive START */
+
+/* Terms of Use - Modal Window END */

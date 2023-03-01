@@ -1,0 +1,272 @@
+
+Main_Container_2- Бывший контейнер для реакта
+{
+    <div class="Main_Container_2">                    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="./js/ExperimentalFrame.js" type="text/babel"></script>
+    # Необходимо перед сдачей проекта заменить development.js на production.min.js        
+            
+        # Здесь начинается тренировка Реакта
+        <div id = "errors" style = "background: #c00; color: #fff; display: none; margin: -20px -20px 20px; padding: 20px; white-space: pre-wrap;">
+        </div>
+    
+        <div id="root">
+        </div>
+
+        <script>
+            window.addEventListener('mousedown', function(e) {
+            document.body.classList.add('mouse-navigation');
+            document.body.classList.remove('kbd-navigation');
+            });
+
+            window.addEventListener('keydown', function(e) {
+                if (e.keyCode === 9) {
+                document.body.classList.add('kbd-navigation');
+                document.body.classList.remove('mouse-navigation');
+            }});
+
+            window.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A' && e.target.getAttribute('href') === '#') {
+                e.preventDefault();
+            }});
+
+            window.onerror = function(message, source, line, col, error) {
+                var text = error ? error.stack || error : message + ' (at ' + source + ':' + line + ':' + col + ')';
+                errors.textContent += text + '\n';
+                errors.style.display = '';
+            };
+            console.error = (function(old) {
+                return function error() {
+                errors.textContent += Array.prototype.slice.call(arguments).join(' ') + '\n';
+                errors.style.display = '';
+                old.apply(this, arguments);
+            }})(console.error);
+        </script> 
+        # Здесь заканчивается тренировка Реакта      
+    </div>
+}
+
+CSS для списка внутри React_Container:
+{
+   .React_Container ul {
+        max-width: 200px;
+        display: flex;
+        font-family: helvetica;
+        padding-top: 10px;
+        padding-right: 15px;
+        cursor: default;
+    }
+}
+
+старые куски JS
+{ 
+    Функция смены темы фрейма
+    let themeChange = function() {
+        if(currentTheme != 'light-theme') {
+        frame.contentWindow.document.body.classList.toggle('dark-theme');
+        console.log("Theme of the frame was changed on dark!")
+        } else {
+            frame.contentWindow.document.body.classList.toggle('light-theme');
+            console.log("Theme of the frame was changed on light!")
+        }
+    };
+
+    ToU.onclick = function(){
+    ToUscript = document.createElement(ToUscript);
+    ToUscript.src = "./TermsOfUse.js";
+    document.body.appendChild(ToUscript);
+    return false;
+    }
+}
+
+SVG SubPage html:
+{
+<div class="SubPage" id="SubPage">
+<div class="menu" id="menu">
+    <a id="page1" onclick="frameChange(currentLink='page1.html')"><p>Как подготовиться к собеседованию?</p></a> </li>
+
+    <a id="page2" onclick="frameChange(currentLink='page2.html')"><p>Изучаем методологии разработки ПО</p></a> </li>
+
+    <a id="page3" onclick="frameChange(currentLink='page3.html')"><p>Техники тест-дизайна.<br>Что это и как этим пользоваться?</p></a>
+</div>
+
+<object class="SVGpage" id="SVGpage" type="image/svg+xml" width="100%" height="100%" data="/SVG_Pages/welcome.svg">Unfortunately your browser does not support SVGs!</object>
+</div>
+}
+
+SVG SubPage css:
+{
+.SubPage {
+    display: flex;
+    flex-direction: row;
+
+    height: 450px;
+    margin-top: 20px;
+
+    border: solid; border-color: #000000; border-radius: 20px;
+}
+
+.menu {
+    flex: auto;
+    margin: 20px;
+    border: solid; border-color: white;
+    max-width: 200px;
+}
+
+.SVGpage {
+display: inline-block;
+position: relative;
+top: 0;
+left: 0;
+}
+
+/* For SVG container END */
+}
+
+FRAME CHANGE js:
+{
+/* Это пока нерабочая херня:
+
+let currentTheme = document.body.getAttribute('class');
+
+let frameChange = function()  {
+    if (currentTheme.includes('light-theme')) {
+        frame.contentWindow.location = currentLink;
+    } else {
+        frame.contentDocument.body.setAttribute('class','dark-theme');
+    }
+
+    
+        frame.onload =() => {
+            if (currentTheme.includes('dark-theme')) {
+                frame.contentDocument.styleSheets[0].cssRules[4].style.setProperty('transition','unset'); 
+    
+                frame.contentDocument.body.setAttribute('class','dark-theme');
+            };
+        };   
+};
+
+А это рабочий код, но с мерцанием:
+
+let frameChange = function()  {
+
+    frame.contentWindow.location = currentLink;    
+    let currentTheme = document.body.getAttribute('class');
+    
+        frame.onload =() => {
+            if (currentTheme.includes('dark-theme')) {
+                frame.contentDocument.styleSheets[0].cssRules[3].style.setProperty('transition','unset'); 
+                frame.contentDocument.body.setAttribute('class','dark-theme');
+            };
+        };   
+    };
+*/ 
+}
+
+FooterPusherIcon rotate function js:
+{
+function rotate(deg)  {
+    deg === 180 ? footPush.setAttribute('style','transform: rotate('+deg+'deg); bottom: 93px') : footPush.setAttribute('style','transform: rotate('+deg+'deg)');
+};
+}
+
+React Training Game
+{
+    /* For REACT Training START */
+ol, ul {
+    padding-left: 30px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+
+/* For REACT Training END */
+}
+
+React Iframe 
+{
+    /* For New div REACT CONTAINER START */
+.React_Container {
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    min-height: 100px;
+    width: 99%;
+}
+
+.React_Container .menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    
+    min-width: 200px;
+    width: 25%;
+
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+.reactFrame {
+    width: 75%;
+    border: solid; border-color: #000000; border-radius: 20px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.reactFrame iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+}
+
+/* For New div REACT CONTAINER END */
+}

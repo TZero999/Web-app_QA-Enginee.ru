@@ -1,0 +1,99 @@
+/* GLOBAL */
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+p { 
+    text-indent: 30px;
+    text-align: justify;
+    margin:0px;
+}
+
+ul {
+    margin-left: -25px;
+}
+
+.intro {
+    text-shadow: 1px 1px 4px #666666;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Scrollbar START */
+
+    /* Трэкер */
+    ::-webkit-scrollbar {
+        background: scroll;
+        width: 7px;
+    }
+
+    /* Ползунок */
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(255 168 97);
+        border-radius: 9px;
+    }
+/* Scrollbar END */
+
+
+/* Light & Dark Themes START */
+    .light-theme {
+        color:      #000000;
+        background: rgb(255, 234, 193);
+        transition: color 0.5s ease, background 0.5s ease;
+    }
+
+    .dark-theme {
+        color:      #ffffff;
+        background: #2e2d2d;
+        transition: color 0.5s ease, background 0.5s ease;
+         
+    }
+    
+    /* Light and Dark Themes - Links */
+    .light-theme a {
+        text-decoration:   none;
+        color:             rgb(0, 0, 0);
+    }
+    .dark-theme a {
+        text-decoration:    none;
+        color:              rgb(255, 255, 255);
+    }
+
+    /* Light and Dark Themes - Links Hover */
+    .light-theme a:hover {
+        color:   rgb(100, 100, 99);
+    }    
+    .dark-theme a:hover {
+        color:   rgb(255, 196, 85);
+    }
+/* Light & Dark Themes END */
+
+
+/* For Page 1 START */
+    .InterviewPreparing {
+        width: 100%;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .InterviewDecription {
+        max-width: 460px;
+        text-align: center;
+    }
+
+    .InterviewVideo {
+        margin-top: 10px;
+    }
+
+    .OriginLink {
+        margin-top: 20px;
+    }
+/* For Page 1 END */

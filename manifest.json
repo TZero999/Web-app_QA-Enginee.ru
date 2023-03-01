@@ -1,0 +1,60 @@
+{
+    "lang": "ru",
+    "dir": "ltr",
+    "name": "Энциклопедия типичного QA-инженера",
+    "description": "QA-Engineer.ru - Энциклопедия типичного QA-инженера",
+    "short_name": "QA-Engineer.ru",
+    "icons": [
+        {
+         "src": "./images/ManifestIcons/android-icon-36x36.png",
+         "sizes": "36x36",
+         "type": "image/png",
+         "density": "0.75"
+        },
+        {
+         "src": "./images/ManifestIcons/android-icon-48x48.png",
+         "sizes": "48x48",
+         "type": "image/png",
+         "density": "1.0"
+        },
+        {
+         "src": "./images/ManifestIcons/android-icon-72x72.png",
+         "sizes": "72x72",
+         "type": "image/png",
+         "density": "1.5"
+        },
+        {
+         "src": "./images/ManifestIcons/android-icon-96x96.png",
+         "sizes": "96x96",
+         "type": "image/png",
+         "density": "2.0"
+        },
+        {
+         "src": "./images/ManifestIcons/android-icon-144x144.png",
+         "sizes": "144x144",
+         "type": "image/png",
+         "density": "3.0"
+        },
+        {
+         "src": "./images/ManifestIcons/android-icon-192x192.png",
+         "sizes": "192x192",
+         "type": "image/png",
+         "density": "4.0"
+        }
+    ],
+    "scope": "/qaengineeru",
+    "start_url": "/qaengineeru.html",
+    "display": "fullscreen",
+    "orientation": "landscape",
+    "theme_color": "rgb(255, 234, 193)",
+    "background_color": "rgb(255, 234, 193)",
+    "screenshots": [{
+        "src": "screenshots/in-game-1x.jpg",
+        "sizes": "640x480",
+        "type": "image/jpeg"
+    },{
+        "src": "screenshots/in-game-2x.jpg",
+        "sizes": "1280x920",
+        "type": "image/jpeg"
+    }]
+}
