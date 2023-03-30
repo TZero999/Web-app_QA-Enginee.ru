@@ -1,0 +1,37 @@
+JSX - специальный синтаксис, расширение JavaScript языка.
+
+С помощью JSX можно более наглядно представить, что React должен отобразить в конечном итоге.
+
+Вот пример:
+1-ый тип записи кода - стандартный, без JSX:
+
+    const e = React.createElement;
+        return e(
+            'button',
+            { onClick: () => this.setState({ liked: true }) },
+            'Нравится'
+        );
+Вроде бы всё ясно, но вот пример записи кода с использованием JSX:
+
+    return (
+        <button onClick={() => this.setState({ liked: true })}>
+            Нравится
+        </button>
+    );
+
+Оба примере делают одно и то же - отображают кнопку <button> с текстом «Нравится».
+
+Несмотря на то, что JSX является совершенно необязательным,
+многие разработчики считают его удобным для разработки UI — как с React,
+так и с другими библиотеками.
+
+Вы можете попробовать JSX в этом онлайн-конвертере:
+https://babeljs.io/repl#?browsers=&build=&builtIns=false&corejs=3.21&spec=false&loose=false&code_lz=DwIwrgLhD2B2AEcDCAbAlgYwNYF4DeAFAJTw4B88EAFmgM4B0tAphAMoQCGETBe86WJgBMAXJQBOYJvAC-RGWQBQ8FfAAyaQYuAB6cFDhkgA&debug=false&forceAllTransforms=false&modules=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.15.7&externalPlugins=&assumptions=%7B%7D
+
+"Быстрый" JSX:
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+Установка JSX:
+    С помощью терминала перейдите в директорию вашего проекта и запустите следующие команды:
+Шаг 1: Запустите команду " npm init -y "
+Шаг 2: Запустите команду " npm install babel-cli@6 babel-preset-react-app@3 "

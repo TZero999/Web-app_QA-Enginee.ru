@@ -1,0 +1,89 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    font-weight: 700;
+    background-image: url(./Tic-Tak_BG.jpeg);
+    background-size: cover;
+  }
+  
+  ol, ul {
+    padding-left: 30px;
+  }
+
+  li {
+    padding-bottom: 3px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  .background {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    min-width: 400px;
+    min-height: 285px;
+    width: 35%;
+    height: 20%;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background-color: rgb(255, 255, 255, 0.85);
+  }
+
+  .root {
+    margin-top: 10px;
+  }
+  
+  .status {
+    position: absolute;
+    display: flex;
+    font-weight: 700;
+    transform: translate3d(-21%, -35px, 0);
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+    width: 400px;
+  }
+
+  .game-board {
+    margin-top: 8%;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
