@@ -238,6 +238,7 @@
         flex-direction: row;
         flex: 1 0 auto;
         margin-top: 280px;
+        margin-bottom: 30px;
         height: 500px;
         width: 99%;
         justify-content: flex-start;
@@ -506,9 +507,3 @@
         /* Footer Adaptive END */
 
 /* Footer END */
-
-
-
-
-
-
