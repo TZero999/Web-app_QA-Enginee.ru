@@ -26,8 +26,8 @@ body {
     justify-content: center;
 
     min-width: 400px;
-    min-height: 285px;
-    width: 35%;
+    min-height: 320px;
+    width: 40%;
     height: 20%;
 
     top: 0;
@@ -36,6 +36,7 @@ body {
     right: 0;
     margin: auto;
 
+    border-radius: 40px;
     background-color: rgb(255, 255, 255, 0.85);
   }
 
@@ -76,14 +77,26 @@ body {
   .game {
     display: flex;
     flex-direction: row;
-    padding-left: 10%;
-    width: 400px;
+    padding-left: 18%;
+    min-width: 450px;
+    min-height: 250px;
   }
 
   .game-board {
-    margin-top: 8%;
+    margin-top: 11%;
   }
   
   .game-info {
     margin-left: 20px;
+  }
+
+  .game-status {
+    transform: translateX(-40%);
+    max-width: 285px;
+    text-align: center;
+  }
+
+  .game-status-win {
+    display: none;
+    /* Стиль "победной" надписи */
   }

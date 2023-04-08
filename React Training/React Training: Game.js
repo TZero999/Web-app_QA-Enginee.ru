@@ -122,10 +122,16 @@ class Game extends React.Component {
     let status;
 
     if (winner) {
-//      status = 'Игра окончена на ' + {stepNumber} +'ходу. \n Поздравляем игрока ' + winner + ' с победой!';
+      status = 'Игра окончена на ' + (this.state.stepNumber) +' ходу. \n Поздравляем игрока ' + winner + ' с победой!';
     } else {
-      status = 'Следующим ходит игрок ' + (this.state.XisNextTurn? 'X' : 'O');
-    }
+      if (history[9] == null ) {
+        status = 'Следующим ходит игрок ' + (this.state.XisNextTurn? 'X' : 'O');
+      } else {
+        status = 'Победила дружба!'
+      }
+    };
+
+
 
     return (
       <div className="game">
@@ -136,7 +142,7 @@ class Game extends React.Component {
           />
         </div>
         <div className="game-info">
-          <div>{ status }</div>
+          <div className="game-status">{ status }</div>
           <ol>{ moves }</ol>
         </div>
       </div>
