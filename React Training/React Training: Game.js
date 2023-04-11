@@ -21,7 +21,6 @@ function winnerDeterm (squares) {
   return null;
 }
 
-
 function Square(props) {
   return(
     <button className='square' onClick={props.onClick} >
@@ -29,7 +28,7 @@ function Square(props) {
     </button>
   );
 }
-  
+
 class Board extends React.Component {
 
   renderSquare(i) {
@@ -122,6 +121,7 @@ class Game extends React.Component {
     let status;
 
     if (winner) {
+//    winnerMessage();
       status = 'Игра окончена на ' + (this.state.stepNumber) +' ходу. \n Поздравляем игрока ' + winner + ' с победой!';
     } else {
       if (history[9] == null ) {
@@ -153,3 +153,13 @@ class Game extends React.Component {
   
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(<Game />);
+
+  /*
+  function winnerMessage() {
+    let winMessage = document.querySelector('.game-status');
+    winMessage.className = 'game-status-win'
+    setTimeout( ()=>{ 
+      winMessage.className = 'game-status';
+    }, 2000);
+  }
+  */
