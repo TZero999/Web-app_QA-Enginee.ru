@@ -1,0 +1,11 @@
+FROM centos:7
+
+LABEL maintainer="skarabahatyyaroslav@gmail.com"
+
+WORKDIR /web-app
+
+COPY . .
+
+EXPOSE 3333
+
+CMD [ "centos","qaengineeru.html" ]

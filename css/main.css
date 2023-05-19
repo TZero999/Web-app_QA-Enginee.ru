@@ -237,7 +237,7 @@
         display: flex;
         flex-direction: row;
         flex: 1 0 auto;
-        margin-top: 280px;
+        margin-top: 250px;
         margin-bottom: 30px;
         height: 500px;
         width: 99%;
@@ -250,12 +250,40 @@
         display: flex;
         border: solid; border-color: #000000; border-radius: 20px;
         font-family: helvetica;
-        padding-top: 10px;
         padding-right: 15px;
         margin-left: 10px;
 
         transition: all 0.5s ease-in-out;
         cursor: default;
+
+        /* Articles List Background */
+        background-color: #fff9c6;
+        background-image: url(https://pibig.info/uploads/posts/2022-07/1657186987_1-pibig-info-p-odnotonnii-oranzhevii-fon-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        
+    }
+
+    .ArticlesList ul {
+        transform: translateX(-7%);
+    }
+
+    .ArticlesList li::marker {
+        font-weight: 900;
+        content: '\27A4';
+        color: coral;
+    }
+
+    /* .ArticlesList p {
+        transform: translateY(-90%);
+    } */
+
+    .ArticlesList li {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        list-style-type: none;
+        cursor: pointer;
+        margin-bottom: 20%;
     }
 
     @media (max-width:600px) {
@@ -265,7 +293,7 @@
         }
 
         .ArticlesList ul {
-            transform: translateX(-10px);
+            transform: translateX(-16%);
         }
     }
     /* iFrame */
@@ -277,7 +305,7 @@
         margin-left: 10px;
         padding: 10px;
 
-        border: solid; border-color: #000000; border-radius: 20px;
+        border-radius: 20px;
         /* transition: all 0.5s ease; */
     }
 
@@ -294,7 +322,8 @@
         
         background-color: rgb(242 100 23);
         background-image: url("/images/Preloaders/Loading-bar.mp4");
-        border-radius: 17px;
+        border: black;
+        border-radius: 25px;
 
         transition: 0.5s;
     }
@@ -394,9 +423,9 @@
     .footer2 button {
         border-radius: 10px;
         background: linear-gradient( 90deg , rgb(255, 178, 107), rgb(255, 129, 83));
-        font-size: small;
-        font-weight: 900;
         transition: all 0.5s ease;
+
+        font-family: monospace;
     }
 
     /* Footer Social Links START */
@@ -466,7 +495,7 @@
             }
         }
 
-        @media ( max-width: 527px) {
+        @media ( max-width: 560px) {
             .footer1 p {
                 transition: all 0.5s ease;
                 font-size: smaller;
