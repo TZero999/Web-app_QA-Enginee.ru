@@ -246,22 +246,34 @@
 
     /* UL */
     .ArticlesList {
-        max-width: 200px;
         display: flex;
-        border: solid; border-color: #000000; border-radius: 20px;
+        flex-direction: column;
+        max-width: 200px;
+
         font-family: helvetica;
+        cursor: default;
+
+        padding-top: 15px;
         padding-right: 15px;
         margin-left: 10px;
 
         transition: all 0.5s ease-in-out;
-        cursor: default;
 
-        /* Articles List Background */
+
+        border: solid; border-color: #000000; border-radius: 20px;
         background-color: #fff9c6;
-        background-image: url(https://pibig.info/uploads/posts/2022-07/1657186987_1-pibig-info-p-odnotonnii-oranzhevii-fon-1.jpg);
+        background-image: url("/images/ArticlesList_Background_cut.png");
         background-repeat: no-repeat;
         background-size: cover; 
         
+        }
+
+    .ArticlesList ul li {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        list-style-type: none;
+        cursor: pointer;
+        margin-bottom: 20%;
     }
 
     .ArticlesList ul {
@@ -271,20 +283,14 @@
     .ArticlesList li::marker {
         font-weight: 900;
         content: '\27A4';
-        color: coral;
+        color: #fcb25a;
+
     }
 
-    /* .ArticlesList p {
-        transform: translateY(-90%);
-    } */
-
-    .ArticlesList li {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 400;
-        list-style-type: none;
-        cursor: pointer;
-        margin-bottom: 20%;
+    .ArticlesList p {
+        transform: translate(7px, -36px);
     }
+
 
     @media (max-width:600px) {
         .ArticlesList {
@@ -296,6 +302,7 @@
             transform: translateX(-16%);
         }
     }
+    
     /* iFrame */
     .PageInPage {
         display: flex;
